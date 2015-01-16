@@ -1,0 +1,25 @@
+application: living-legends
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.*\.html)
+  static_files: \1
+  upload: .*\.html
+
+
+- url: /assets
+  static_dir: assets
+
+- url: /
+  static_files: index.html
+  upload: index\.html
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+# - url: /api/.*
+#   script: api/main.php
