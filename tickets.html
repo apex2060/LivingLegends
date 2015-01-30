@@ -28,7 +28,6 @@
 </head>
 
 <body class="vevent" ng-app="livingLegends">
-	<div class="staticB"></div>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -62,7 +61,7 @@
 		</div>
 		<div class="container">
 			<div class="media ticket" ng-repeat="ticket in tickets">
-				<h1>{{ticket.type | uppercase}} Ticket</h1>
+				<h1>{{ticket.type | ucFirst}} Ticket</h1>
 				<img ng-src="{{tools.qr(ticket)}}" alt="QR">
 				<p>Valid for admitance to the Living Legends performance Feb. 24th 2015</p>
 				<p>{{tools.description(ticket)}}</p>

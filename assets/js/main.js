@@ -38,7 +38,11 @@ angular.module('livingLegends', ['ngRoute'])
 				return total;
 			},
 			processing:function(){
-				return tools.total() * .029 + .30;
+				var ttl = tools.total();
+				if(ttl>0)
+					return Math.round((( (100/971)*(10*ttl+3) ) - ttl) * 100) / 100;
+				else
+					return 0
 			},
 			final:function(){
 				return tools.total() + tools.processing();
@@ -98,7 +102,7 @@ angular.module('livingLegends', ['ngRoute'])
 			qr: function(ticket){
 				var google = 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='
 				var other = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='
-				return other+encodeURIComponent('https://livinglegends-apex2060.c9.io/scan.html#/?orderId='+ticket.orderId+'&ticketId='+ticket.objectId)
+				return other+encodeURIComponent('http://livinglegends.info/scan.html#/?orderId='+ticket.orderId+'&ticketId='+ticket.objectId)
 			},
 			description: function(ticket){
 				if(ticket.type == 'youth')
@@ -306,3 +310,32 @@ angular.module('livingLegends', ['ngRoute'])
 			}
 		}
 	}])
+	
+	.filter('ucFirst', function() {
+		return function(input) {
+			return input.charAt(0).toUpperCase() + input.slice(1);
+		};
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
