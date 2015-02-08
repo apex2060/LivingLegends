@@ -56,6 +56,8 @@ angular.module('livingLegends', ['ngRoute'])
 			},
 			checkout:function(){
 				var ccInfo = $scope.card;
+				if($scope.order && $scope.order.user)
+					ccInfo.name = $scope.order.user.fullName;
 				Stripe.card.createToken(ccInfo, function(status, response){
 					if(response.error){
 						alert(response.error.message)
