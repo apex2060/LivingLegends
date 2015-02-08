@@ -2,7 +2,7 @@ var it = {};
 angular.module('livingLegends', ['ngRoute'])
 	.controller('CheckoutCtrl', ['$scope', '$http', function($scope, $http) {
 		var config = {
-			stripeKey: 			'pk_test_67ULD85LvW1vIGHYjzF7yrcx', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
+			stripeKey: 			'pk_live_X5vVRdtlzVgvrTzY06YriuDq', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
 		 	parseAppId: 		'wrW1HED5dzxcRqubPhN665860ALUqsKM7ze5hDSe',
 		 	parseJsKey: 		'MLwhcDhJcMZxPhxySBENVsMEuiH2u7VI59epHnO1',
 		 	parseRestApiKey: 	'zyL6RuhwOrrgziL964TBPpGzbXZTJPpzd04xyJan',
@@ -126,7 +126,7 @@ angular.module('livingLegends', ['ngRoute'])
 	
 	.controller('ScannerCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		var config = {
-			stripeKey: 			'pk_test_67ULD85LvW1vIGHYjzF7yrcx', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
+			stripeKey: 			'pk_live_X5vVRdtlzVgvrTzY06YriuDq', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
 		 	parseAppId: 		'wrW1HED5dzxcRqubPhN665860ALUqsKM7ze5hDSe',
 		 	parseJsKey: 		'MLwhcDhJcMZxPhxySBENVsMEuiH2u7VI59epHnO1',
 		 	parseRestApiKey: 	'zyL6RuhwOrrgziL964TBPpGzbXZTJPpzd04xyJan',
@@ -166,7 +166,7 @@ angular.module('livingLegends', ['ngRoute'])
 	}])
 	.controller('ScanCtrl', ['$scope', '$http', '$location', '$q', function($scope, $http, $location, $q) {
 		var config = {
-			stripeKey: 			'pk_test_67ULD85LvW1vIGHYjzF7yrcx', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
+			stripeKey: 			'pk_live_X5vVRdtlzVgvrTzY06YriuDq', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
 		 	parseAppId: 		'wrW1HED5dzxcRqubPhN665860ALUqsKM7ze5hDSe',
 		 	parseJsKey: 		'MLwhcDhJcMZxPhxySBENVsMEuiH2u7VI59epHnO1',
 		 	parseRestApiKey: 	'zyL6RuhwOrrgziL964TBPpGzbXZTJPpzd04xyJan',
