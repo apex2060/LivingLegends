@@ -28,7 +28,7 @@
 </head>
 
 <body class="vevent" ng-app="livingLegends">
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top noprint" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -54,10 +54,20 @@
 	<!-- Tickets -->
 	<div id="tickets" class="content-section-a" ng-controller="TicketCtrl">
 		<div class="container">
-			<h2 class="section-heading">Your Online Tickets!</h2>
-			<hr class="section-heading-spacer">
-			<div class="clearfix"></div>
-			<p class="lead">You can print these tickets, or just bring them on your phone.</p>
+			<div class="row">
+				<div class="col-sm-8 noprint">
+					<h2 class="section-heading">Your Online Tickets!</h2>
+					<hr class="section-heading-spacer">
+					<div class="clearfix"></div>
+					<p class="lead">You can print these tickets, or just bring them on your phone.</p>
+				</div>
+				<div class="col-sm-4 order">
+					<h3>Living Legends Order</h3>
+					<div class="well">
+						<img class="thumbnail" ng-src="{{tools.qro()}}" alt="QR">
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="media ticket" ng-repeat="ticket in tickets">
@@ -71,7 +81,7 @@
 	</div>
 
 	<!-- Footer -->
-	<footer>
+	<footer class="noprint">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">

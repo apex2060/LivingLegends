@@ -5,6 +5,8 @@
 	padding: 15px;
 	background: #FFF;
 	color: #000;
+	margin: 15px;
+	page-break-inside:avoid;
 }.ticket h1{
 	margin-top: 0px;
 }.ticket p{
@@ -12,4 +14,19 @@
 }.ticket img{
 	float: left;
 	margin-right: 15px;
+}.ticket *{
+	page-break-after:avoid;
+	page-break-before:avoid;
+}
+
+.order .well{
+	margin: 15px;
+	background: #CCC;
+	text-align: center;
+	border-bottom: 1px dashed #333;
+	margin-bottom: 5px;
+}
+
+.noprint{
+	display:none !important;
 }

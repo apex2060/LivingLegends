@@ -83,7 +83,7 @@ angular.module('livingLegends', ['ngRoute'])
 	
 	.controller('TicketCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		var config = {
-			stripeKey: 			'pk_test_67ULD85LvW1vIGHYjzF7yrcx', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
+			stripeKey: 			'pk_live_X5vVRdtlzVgvrTzY06YriuDq', //Live Key: pk_live_X5vVRdtlzVgvrTzY06YriuDq
 		 	parseAppId: 		'wrW1HED5dzxcRqubPhN665860ALUqsKM7ze5hDSe',
 		 	parseJsKey: 		'MLwhcDhJcMZxPhxySBENVsMEuiH2u7VI59epHnO1',
 		 	parseRestApiKey: 	'zyL6RuhwOrrgziL964TBPpGzbXZTJPpzd04xyJan',
@@ -103,6 +103,11 @@ angular.module('livingLegends', ['ngRoute'])
 				var google = 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='
 				var other = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='
 				return other+encodeURIComponent('http://livinglegends.info/scan.html#/?orderId='+ticket.orderId+'&ticketId='+ticket.objectId)
+			},
+			qro: function(){
+				var google = 'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='
+				var other = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='
+				return other+encodeURIComponent('http://livinglegends.info/scan.html#/?orderId='+rp.orderId+'&ticketId=all')
 			},
 			description: function(ticket){
 				if(ticket.type == 'youth')
