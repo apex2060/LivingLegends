@@ -84,7 +84,7 @@
 							</li>
 							<li class="list-group-item">
 								<p class="list-group-item-text pull-right">{{tools.processing() | currency}}</p>
-								<h4 class="list-group-item-heading">CC Fee: </h4>
+								<h4 class="list-group-item-heading" title="The service used for processing credit card payments online charges this fee."><a href="https://stripe.com/us/pricing">CC Fee: </a></h4>
 							</li>
 							<li class="list-group-item">
 								<p class="list-group-item-text pull-right">{{tools.final() | currency}}</p>
@@ -156,18 +156,18 @@
 									<div class="col-xs-5">
 										<select class="form-control" name="cardExpMonth" id="cardExpMonth" ng-model="card.exp_month">
 											<option>Month</option>
-											<option value="01">Jan (01)</option>
-											<option value="02">Feb (02)</option>
-											<option value="03">Mar (03)</option>
-											<option value="04">Apr (04)</option>
-											<option value="05">May (05)</option>
-											<option value="06">June (06)</option>
-											<option value="07">July (07)</option>
-											<option value="08">Aug (08)</option>
-											<option value="09">Sep (09)</option>
-											<option value="10">Oct (10)</option>
-											<option value="11">Nov (11)</option>
-											<option value="12">Dec (12)</option>
+											<option value="01">1 (Jan)</option>
+											<option value="02">2 (Feb)</option>
+											<option value="03">3 (Mar)</option>
+											<option value="04">4 (Apr)</option>
+											<option value="05">5 (May)</option>
+											<option value="06">6 (Jun)</option>
+											<option value="07">7 (Jul)</option>
+											<option value="08">8 (Aug)</option>
+											<option value="09">9 (Sep)</option>
+											<option value="10">10 (Oct)</option>
+											<option value="11">11 (Nov)</option>
+											<option value="12">12 (Dec)</option>
 										</select>
 									</div>
 									<div class="col-xs-5">
